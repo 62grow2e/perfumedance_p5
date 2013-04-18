@@ -1,6 +1,13 @@
+import ddf.minim.*;
+import ddf.minim.signals.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+
 BvhParser parserA = new BvhParser();
 PBvh bvh1, bvh2, bvh3;
-	
+
+AudioPlayer player;
+Minim minim;
 	
 public void setup()
 {
@@ -8,10 +15,13 @@ public void setup()
   background( 0 );
   noStroke();
   frameRate( 30 );
+  minim = new Minim(this);
+  player = minim.loadFile("Perfume_globalsite_sound.wav");
+  player.play();
   
-  bvh1 = new PBvh( loadStrings( "A_test.bvh" ) );
-  bvh2 = new PBvh( loadStrings( "B_test.bvh" ) );
-  bvh3 = new PBvh( loadStrings( "C_test.bvh" ) );
+  bvh1 = new PBvh( loadStrings( "kashiyuka.bvh" ) );
+  bvh2 = new PBvh( loadStrings( "nocchi.bvh" ) );
+  bvh3 = new PBvh( loadStrings( "aachan.bvh" ) );
 
   loop();
 }
@@ -34,7 +44,10 @@ public void draw()
   stroke(255);
   pushMatrix();
   translate( width/2, height/2-10, 0);
-  scale(-1, -1, -1);
+  rotateX(PI);
+  sphereDetail(10);
+  lights();
+  directionalLight(100, 100, 100, -1, -1, 0);
   
   //model
   bvh1.update( millis() );
