@@ -8,7 +8,10 @@ PBvh bvh1, bvh2, bvh3;
 
 AudioPlayer player;
 Minim minim;
+FFT fft;
 	
+float soundLevel = 0;
+
 public void setup()
 {
   size( 1280, 720, P3D );
@@ -18,6 +21,7 @@ public void setup()
   minim = new Minim(this);
   player = minim.loadFile("Perfume_globalsite_sound.wav");
   player.play();
+  fft = new FFT(player.bufferSize(), player.sampleRate());
   
   bvh1 = new PBvh( loadStrings( "kashiyuka.bvh" ) );
   bvh2 = new PBvh( loadStrings( "nocchi.bvh" ) );
@@ -28,7 +32,12 @@ public void setup()
 
 public void draw()
 {
+  fft.forward(player.mix);
   background( 0 );
+  soundLevel = 0;
+  for(int i=0; i<fft.specSize(); i++) {
+  	soundLevel += fft.getBand(i);
+  }
   
   //camera
   float _cos = cos(millis() / 5000.f);
