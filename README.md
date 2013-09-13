@@ -47,9 +47,54 @@
         sphere(20);
 ```
 
+ここは頭や手足の先の部分を描写している部分です。この [`sphere`](http://processing.org/reference/sphere_.html)`(20)` は、半径20の球を表示する関数です。この`20`の部分の数値を大きくしたり小さくしてみて、何が起きるか見てみましょう。ちょっと変えたくらいではわかりませんので、極端に大きくしたり小さくしてみたり、何度も試してみてください。
 
-ここは頭や手足の先の部分
+また、腕や脚の部分を描いているのは以下の部分です。
 
-- 形を変える
-- 音に反応させる
-- ボーンの描画の仕方
+```java
+      translate(b.absPos.x, b.absPos.y, b.absPos.z);
+      ellipse(0, 0, 5, 5);
+```
+
+ここでも、[`ellipse`](http://processing.org/reference/ellipse_.html) の後ろにある数値を色々と変えてみましょう。それぞれの数値がどんな意味を持っているのか、描かれたグラフィクスから推測してみてください。
+
+### 形を変える
+
+次は形を変えてみましょう。さっきの `sphere` の部分を [`box`](http://processing.org/reference/box_.html) に変えてみると…
+
+`ellipse` の方も変えてみましょう。三角形を描くなら、[`triangle`](http://processing.org/reference/triangle_.html) を使います。
+
+```java
+      triangle(0, 5, -5, -5, 5, -5);
+```
+
+と書いてみましょう。他にも色々な図形を試してみてください。
+
+### 音に反応させる
+
+本プログラムでは、FFT を使った音の周波数解析のための基本的なコードが組込まれています。試しにそれを使ってみましょう。
+
+`soundLevel` というグローバル変数が定義されており、これは `draw()` の瞬間にどれくらいの音圧がかかっていたかを示すようになっています。この曲の場合、最高でだいたい 3000 くらいの値になります。この値を使って球の大きさを変えてみましょう。PBvh.pde の中の該当箇所を
+
+```java
+        sphere(soundLevel / 100);
+```
+
+としてみてください。音に合わせて球の大きさが変化しますね。
+
+周波数解析の結果を上手に使うと、例えば音域の低い音や高い音にそれぞれ反応するようなアニメーションを作ることができます。コードの中では、
+
+```java
+  soundLevel = 0;
+  for (int i=0; i<fft.specSize(); i++) {
+    soundLevel += fft.getBand(i);
+  }
+```
+
+を見てみると、周波数毎の値を取り出す方法が見えてくると思います。
+
+Processing では、[minim](http://code.compartmental.net/tools/minim/) というライブラリが音まわりを担当しています。[minim のドキュメント](http://code.compartmental.net/tools/minim/manual-fft/)もあわせて参考にしてください。
+
+### ボーンの描画の仕方
+
+※あとで書く
