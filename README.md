@@ -1,7 +1,7 @@
 # perfumedance\_p5 README
 ## はじめに
 
-これは [Perfume Global Site](http://www.perfume-global.com/)で配布されているダンスモーションを [Processing](http://processing.org/) で可視化する[サンプルプログラム](https://github.com/perfume-dev/example-processing) に、改造しやすくなるよう手を加えたものです。
+これは [Perfume Global Site](http://www.perfume-global.com/)で配布されているダンスモーションを [Processing](http://processing.org/) で可視化する[サンプルプログラム](https://github.com/perfume-dev/example-processing)に、改造しやすくなるよう手を加えたものです。
 
 ### オリジナルとの差分
 
