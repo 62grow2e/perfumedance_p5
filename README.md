@@ -12,7 +12,11 @@
 
 ## 使い方
 
-まずは本プログラムを展開します。お使いの Processing 用のスケッチブック保存フォルダの中に、本プログラムを展開してください。ZIP ファイルで入手した場合は、展開された perfumedance\_p5 というフォルダをそのままスケッチブック保存フォルダに置いてください。
+まずは本プログラムをダウンロードして、Processing で実行できるようにしましょう。以下の ZIP ファイルをまずはダウンロードしてください。
+
+- [https://github.com/fukuchi/perfumedance\_p5/archive/master.zip](https://github.com/fukuchi/perfumedance_p5/archive/master.zip)
+
+この ZIP ファイルを展開すると perfumedance\_p5 というフォルダが作られますので、それをお使いの Processing 用のスケッチブック保存フォルダの中に置いてください。
 
 次にダンスモーションのデータと楽曲データを下記サイトからダウンロードしましょう。
 
