@@ -26,6 +26,12 @@ public class PBvh
       translate(b.absPos.x, b.absPos.y, b.absPos.z);
       ellipse(0, 0, 5, 5);
       popMatrix();
+      //BvhBone p = b.getParent();
+      //if(p != null) {
+      //  stroke(255);
+      //  line(b.absPos.x, b.absPos.y, b.absPos.z, p.absPos.x, p.absPos.y, p.absPos.z);
+      //  noStroke();
+      //}
       if (!b.hasChildren())
       {
         pushMatrix();
