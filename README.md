@@ -38,7 +38,7 @@
 
 以上のファイルが用意できたら、まずは実行してみて、Perfume の三人が音楽にあわせて踊っているグラフィクスが見られるかどうかを確認してみてください。下のような映像が表示されれば成功です。もしうまく行かない場合は、上述した各種ファイルの置き場所が間違っている可能性があります。
 
-<iframe width="420" height="315" src="//www.youtube.com/embed/3OktmR75A4s" frameborder="0" allowfullscreen><img src="screenshot.jpg" alt=""/></iframe>
+<iframe width="420" height="315" src="//www.youtube.com/embed/3OktmR75A4s" frameborder="0" allowfullscreen><a href="http://youtu.be/3OktmR75A4s"><img src="screenshot.jpg" alt=""/></a></iframe>
 
 ## 改造のポイント
 
