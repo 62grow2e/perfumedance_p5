@@ -36,9 +36,9 @@
 
 また、Perfume\_globalsite\_sound.wav.zip を展開し、その中に含まれている Perfume\_globalsite\_sound.wav もやはり perfumedance\_p5/data の中に置きます。
 
-以上のファイルが用意できたら、まずは実行してみて、Perfume の三人が音楽にあわせて踊っているグラフィクスが見られるかどうかを確認してみてください。下図のような映像が表示されれば成功です。もしうまく行かない場合は、上述した各種ファイルの置き場所が間違っている可能性があります。
+以上のファイルが用意できたら、まずは実行してみて、Perfume の三人が音楽にあわせて踊っているグラフィクスが見られるかどうかを確認してみてください。下のような映像が表示されれば成功です。もしうまく行かない場合は、上述した各種ファイルの置き場所が間違っている可能性があります。
 
-[![](screenshot.jpg)](http://youtu.be/3OktmR75A4s)
+<iframe width="420" height="315" src="//www.youtube.com/embed/3OktmR75A4s" frameborder="0" allowfullscreen><img src="screenshot.jpg" alt=""/></iframe>
 
 ## 改造のポイント
 
