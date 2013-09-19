@@ -24,11 +24,11 @@ public void setup()
   
   minim = new Minim(this);
   player = minim.loadFile("Perfume_globalsite_sound.wav");
-  player.play();
   fft = new FFT(player.bufferSize(), player.sampleRate());
+  player.play();
+  soundDelay = millis();
   
   loop();
-  soundDelay = millis();
 }
 
 public void draw()
